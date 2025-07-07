@@ -1,0 +1,24 @@
+{
+    "compression": "none",
+    "packages": [
+        "genpack/systemimg",
+        "genpack/wireless",
+        "net-analyzer/zabbix",
+        "net-misc/iperf",
+        "app-misc/screen",
+        "dev-vcs/git",
+    ],
+    "accept_keywords": {
+        "sys-kernel/gentoo-kernel-bin": null,
+        "virtual/dist-kernel": null, // for gentoo-kernel-bin
+    },
+    "use": {
+        "genpack/systemimg": "baremetal",
+        "sys-libs/zlib": "minizip",
+        "sys-boot/grub": "GRUB_PLATFORMS: efi-32",
+        "net-analyzer/zabbix": "-postgres",
+    },
+    "license": {
+        "sys-kernel/linux-firmware": "linux-fw-redistributable",
+    }
+}
