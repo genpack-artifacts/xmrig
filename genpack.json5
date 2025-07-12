@@ -21,6 +21,7 @@
     license: {
         "sys-kernel/linux-firmware": "linux-fw-redistributable",
     },
+    services: ["status-beep"],
     arch: {
         "x86_64": {
             use:{
@@ -28,5 +29,14 @@
             }
         }
     },
-    services: ["status-beep"]
+    variants: {
+        "xmrig-motion": {
+            packages: [
+                "media-video/motion",
+            ],
+            use: {
+                "media-video/motion": "ffmpeg",
+            },
+        }
+    }
 }
